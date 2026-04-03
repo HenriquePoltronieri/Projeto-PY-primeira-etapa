@@ -1,8 +1,8 @@
 from estoque import cadastrar_peca, listar_pecas, registrar_producao
-from vendas import vender_peca, faturamento
+from vendas import vender_peca
 from busca import buscar_por_carro
 from montagem import montar_carro
-# from dados import faturamento
+import dados
 
 def menu():
     while True:
@@ -32,7 +32,7 @@ def menu():
         elif op == "6":
             montar_carro()
         elif op == "7":
-            print("Faturamento:", faturamento, "\n")
+            print("Faturamento:", dados.faturamento, "\n")
         elif op == "0":
             break
         else:

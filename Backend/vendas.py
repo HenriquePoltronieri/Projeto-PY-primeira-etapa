@@ -1,15 +1,13 @@
-from dados import pecas, faturamento
+import dados
 from estoque import listar_pecas
 from datetime import datetime
 
 def vender_peca():
-    global faturamento
-
     listar_pecas()
     id_digitado = int(input("ID: "))
     matricula = input("Matrícula: ")
 
-    for p in pecas:
+    for p in dados.pecas:
         if p.id == id_digitado:
             qtd = int(input("Quantidade: "))
 
@@ -18,11 +16,11 @@ def vender_peca():
             else:
                 p.estoque -= qtd
                 total = qtd * p.preco
-                faturamento += total
+                dados.faturamento += total
 
                 print("Venda realizada!")
                 print("Total:", total)
-                print("Faturamento:", faturamento)
+                print("Faturamento:", dados.faturamento)
                 print("Data:", datetime.now(), "\n")
             return
 
