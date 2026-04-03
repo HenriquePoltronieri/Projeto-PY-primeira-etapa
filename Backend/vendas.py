@@ -17,6 +17,7 @@ def vender_peca():
                 p.estoque -= qtd
                 total = qtd * p.preco
                 dados.faturamento += total
+                dados.salvar_json()
 
                 print("Venda realizada!")
                 print("Total:", total)

@@ -1,5 +1,5 @@
 from models import Peca
-from dados import pecas
+from dados import pecas, salvar_json
 from datetime import datetime
 
 def cadastrar_peca():
@@ -27,6 +27,7 @@ def cadastrar_peca():
     )
 
     pecas.append(nova)
+    salvar_json()
     print("Peça cadastrada!\n")
 
 
@@ -48,6 +49,7 @@ def registrar_producao():
         if p.id == id_digitado:
             qtd = int(input("Quantidade: "))
             p.estoque += qtd
+            salvar_json()
             print("Novo estoque:", p.estoque)
             print("Funcionário:", matricula)
             print("Data:", datetime.now(), "\n")
