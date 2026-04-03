@@ -4,7 +4,6 @@ import os
 pecas = []
 faturamento = 0
 
-# Caminho do arquivo JSON
 caminho_json = os.path.join(os.path.dirname(__file__), "..", "pecas.json")
 
 def carregar_json():
@@ -20,7 +19,6 @@ def carregar_json():
 def salvar_json():
     """Salva as peças no arquivo JSON"""
     try:
-        # Converte os objetos Peca em dicionários
         pecas_dict = []
         for p in pecas:
             pecas_dict.append({
