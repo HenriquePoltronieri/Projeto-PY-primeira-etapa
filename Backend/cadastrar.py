@@ -45,7 +45,14 @@ def cadastrar_peca():
 
 def listar_pecas():
     for p in pecas:
-        
+        print(f"""
+ID: {p.id}
+Nome: {p.nome}
+Estoque: {p.estoque}
+Carros: {p.carros}
+Local: {p.localizacao}
+Fornecedor: {p.fornecedor}
+""")
 
 def registrar_producao():
     listar_pecas()
