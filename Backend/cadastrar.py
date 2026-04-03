@@ -43,6 +43,10 @@ def cadastrar_peca():
     pecas.append(nova_peca)
     print("Peça cadastrada com sucesso!\n")
 
+def listar_pecas():
+    for p in pecas:
+        
+
 def registrar_producao():
     listar_pecas()
     id_digitado = int(input("Id da peça: "))
